@@ -8,7 +8,7 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
 import './header.styles.scss'
 
-const Header = ({ currentUser, hidden }) => (
+const Header = ({ currentUser, hidden}) => (
 
     <div className='header'>
         <Link to='/' className='logo-container'>
