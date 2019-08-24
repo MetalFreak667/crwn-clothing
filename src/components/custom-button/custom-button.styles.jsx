@@ -33,11 +33,32 @@ const googleSignInStyles = css`
     }
 `;
 
+const itemButtonStyles = css`
+    width: 80%;
+    opacity: 0.7;
+    position: absolute;
+    top: 255px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    
+    &:hover { 
+        opacity: 0.85;
+        display: flex;
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+      }    
+`;
+
 const getButtonStyles = props => {
     if(props.isGoogleSignIn){
         return googleSignInStyles;
     }
 
+    if(props.isItem){
+        return itemButtonStyles;
+    }
     return props.inverted ? invertedButtonStyles : buttonStyles;
 }
 
