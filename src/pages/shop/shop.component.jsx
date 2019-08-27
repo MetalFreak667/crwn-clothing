@@ -19,7 +19,7 @@ class ShopPage extends React.Component {
                     exact 
                     path={`${match.path}`} 
                     component={CollectionsOverviewContainer}>                
-                </Route>
+                </Route> 
                 <Route 
                     path={`${match.path}:collectionId`}                 
                     component={CollectionPageContainer}>
