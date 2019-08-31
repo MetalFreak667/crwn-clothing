@@ -51,11 +51,6 @@ export function* signUp({ payload: { displayName, email, password, confirmPasswo
     try {
         const { user } = yield auth.createUserWithEmailAndPassword(email, password);
         yield getSnapshotFromUserAuth(user, {displayName});
-        /*
-const {user} = await auth.createUserWithEmailAndPassword(email, password);
-
-            await createUserProfileDocument(user, {displayName});
-        */
 
     }
     catch(error)
