@@ -8627,6 +8627,11 @@ react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
   integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
 
+react-mail-form@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/react-mail-form/-/react-mail-form-2.0.2.tgz#6a2be2c09fb7a5193094fce30eed58d4512fec4f"
+  integrity sha512-IuyrtpOK9lsgrpD20myyp3FSmTCgR04tFB73jpb6/zXZkas9hP6KbT6ejRjxpFgICn+bu+JwPtKGzt13ZhKMkA==
+
 react-redux@^7.1.0:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-7.1.1.tgz#ce6eee1b734a7a76e0788b3309bf78ff6b34fa0a"

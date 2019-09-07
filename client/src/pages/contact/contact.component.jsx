@@ -1,15 +1,11 @@
 import React from 'react';
 
-import { ContactContainer } from './contact.styles';
-
-import { ReactComponent as Loading} from '../../assets/loading.svg';
+import { ContactContainer, ContactForm } from './contact.styles';
 
 const Contact = () =>
 (
     <ContactContainer>
-    Hi, how are You?
-    Have some questions? Want some coffee or beer? 
-<Loading></Loading>
+        <ContactForm to="net4metal+playing_with_react@gmail.com" titlePlaceholder="Subject" contentsPlaceholder="What you have to say" buttonText ="Send me and E-mail" />
     </ContactContainer>
 );
 

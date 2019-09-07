@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ReactComponent as Loading} from '../../assets/loading.svg';
 
 export const SpinnerOverlay = styled.div`
   height: 60vh;
@@ -7,6 +8,9 @@ export const SpinnerOverlay = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const LoadingContainer = styled(Loading)`
+`
 
 export const SpinnerContainer = styled.div`
   display: inline-block;
