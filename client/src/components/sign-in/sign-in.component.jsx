@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-
+import { ReactComponent as GoogleLogo } from '../../assets/google.svg';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 import { connect } from 'react-redux';
 import { googleSignInStart, emailSignInStart, facebookSignInStart } from '../../redux/user/user.actions';
 
-import { SignInContainer, SignInTitleContainer, SignInButtonsContainer} from './sign-in.styles';
+import { SignInContainer, SignInTitleContainer, SignInButtonsContainer, GoogleIcon} from './sign-in.styles';
 
 const SignIn = ({ emailSignInStart, googleSignInStart, facebookSignInStart }) =>
 {
@@ -46,9 +46,14 @@ const SignIn = ({ emailSignInStart, googleSignInStart, facebookSignInStart }) =>
                 />
                 <SignInButtonsContainer>
                     <CustomButton type='submit'>SIGN IN</CustomButton>
-                    <CustomButton type='button' onClick={googleSignInStart} isGoogleSignIn>SIGN IN WITH GOOGLE</CustomButton>
-<br></br>
-                    <CustomButton type='button' onClick={facebookSignInStart} >SIGN IN WITH FACEBOOK</CustomButton>
+                    <CustomButton type='button' onClick={googleSignInStart} isGoogleSignIn>
+                    <GoogleIcon></GoogleIcon>SIGN IN
+                    </CustomButton>
+                    <CustomButton type='button' onClick={facebookSignInStart} isGoogleSignIn >
+                    <img  align="middle" height="30PX;" src="'../../face.png"></img>
+                    SIGN IN
+                    </CustomButton>
+                    
                 </SignInButtonsContainer>
             </form>
         </SignInContainer>

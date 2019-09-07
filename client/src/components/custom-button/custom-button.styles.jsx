@@ -1,5 +1,6 @@
 import styled,  { css } from 'styled-components';
 
+
 const buttonStyles = css`
     background-color: black;
     color: white;
@@ -9,6 +10,8 @@ const buttonStyles = css`
         color: black;
         border: 1px solid black;
       }
+    
+    
 `;
 
 const invertedButtonStyles = css`
@@ -62,8 +65,9 @@ const getButtonStyles = props => {
     return props.inverted ? invertedButtonStyles : buttonStyles;
 }
 
+
 export const CustomButtonContainer = styled.button`
-    min-width: 165px;
+    min-width: 125px;
     width: auto;
     height: 50px;
     letter-spacing: 0.5px;
@@ -77,4 +81,10 @@ export const CustomButtonContainer = styled.button`
     display: flex;
     justify-content: center;
     ${getButtonStyles}      
+
+    img {
+        margin:10px 5px 0px -25px
+    }
+
+    
 `;
