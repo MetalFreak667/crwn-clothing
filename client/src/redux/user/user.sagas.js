@@ -5,8 +5,11 @@ import UserActionTypes from './user.types';
 
 export function* getSnapshotFromUserAuth(userAuth, additionalData){
     try {
+        console.log(userAuth);
+        console.log(additionalData);
         const userRef = yield call(createUserProfileDocument, userAuth, additionalData);
         const userSnapshot = yield userRef.get();
+
         yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() }));
     } catch (error)
     {
@@ -50,7 +53,13 @@ export function* signUp({ payload: { displayName, email, password, confirmPasswo
 
     try {
         const { user } = yield auth.createUserWithEmailAndPassword(email, password);
-        yield getSnapshotFromUserAuth(user, {displayName});
+        const min=4; 
+        const max=5;  
+        const random = Math.floor(Math.random() * (+max - +min)) + +min; 
+        const photoURL = `https://robohash.org/${user.uid}?set=set${random}`;
+        console.log(photoURL);
+
+        yield getSnapshotFromUserAuth(user, {displayName, photoURL});
 
     }
     catch(error)

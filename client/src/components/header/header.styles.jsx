@@ -42,3 +42,19 @@ export const OptionLink = styled(Link)`
     padding: 10px 15px;
     cursor: pointer;
 `;
+
+export const UserImage = styled.img`
+    border-radius: 50%;
+    border:gray;
+    border-bottom-style:solid;
+    height: 100%;
+    width: 70px;
+
+
+    @media screen and (max-width: 800px) {
+        width: 50px;
+        padding: 0px;
+        
+    }
+    
+`

@@ -7,7 +7,7 @@ import CartIcon  from '../../components/cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
-import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink} from './header.styles';
+import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink, UserImage } from './header.styles';
 import { signOutStart } from '../../redux/user/user.actions';
 
 const Header = ({ currentUser, hidden, signOutStart }) => (
@@ -20,14 +20,16 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
             <OptionLink to='/shop'>
                 SHOP
             </OptionLink>
-            <OptionLink to='/shop'>
+            <OptionLink to='/contact'>
                 CONTACT
             </OptionLink>
             {
                 currentUser ?
-                (<OptionLink as='div' onClick={signOutStart}>SIGN OUT {currentUser.displayName}</OptionLink>)
+                (<OptionLink as='div' onClick={signOutStart}>
+                <UserImage src={currentUser.photoURL}></UserImage>
+                </OptionLink>)
                 :
-                (<OptionLink to='signin'>SIGN IN</OptionLink>)
+                (<OptionLink to='/signin'>SIGN IN</OptionLink>)
             }
             <CartIcon></CartIcon>
         </OptionsContainer>
