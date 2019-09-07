@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 import { connect } from 'react-redux';
-import { googleSignInStart, emailSignInStart } from '../../redux/user/user.actions';
+import { googleSignInStart, emailSignInStart, facebookSignInStart } from '../../redux/user/user.actions';
 
 import { SignInContainer, SignInTitleContainer, SignInButtonsContainer} from './sign-in.styles';
 
-const SignIn = ({ emailSignInStart, googleSignInStart }) =>
+const SignIn = ({ emailSignInStart, googleSignInStart, facebookSignInStart }) =>
 {
     const [userCredentials, setCredentials] = useState({ email: '', password: '' });
     const { email, password } = userCredentials;
@@ -47,6 +47,8 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) =>
                 <SignInButtonsContainer>
                     <CustomButton type='submit'>SIGN IN</CustomButton>
                     <CustomButton type='button' onClick={googleSignInStart} isGoogleSignIn>SIGN IN WITH GOOGLE</CustomButton>
+<br></br>
+                    <CustomButton type='button' onClick={facebookSignInStart} >SIGN IN WITH FACEBOOK</CustomButton>
                 </SignInButtonsContainer>
             </form>
         </SignInContainer>
@@ -56,6 +58,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) =>
 
 const mapDispatchToProps = dispatch => ({
     googleSignInStart: () => dispatch(googleSignInStart()),
+    facebookSignInStart: () => dispatch(facebookSignInStart()),
     emailSignInStart: ({email, password}) => dispatch(emailSignInStart({email, password}))
 })
 
