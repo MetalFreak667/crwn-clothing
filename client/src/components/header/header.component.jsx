@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as Logo} from '../../assets/crown.svg';
+
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -14,7 +15,7 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
 
     <HeaderContainer>
         <LogoContainer to='/' >
-            <Logo className='logo'></Logo>
+            <Logo className='logo'></Logo>            
         </LogoContainer>
         <OptionsContainer>
             <OptionLink to='/shop'>
